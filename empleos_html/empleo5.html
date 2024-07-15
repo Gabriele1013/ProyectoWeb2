@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bolsa de Empleos para ULEAM</title>
+
+    <script src="https://kit.fontawesome.com/b8efc39eb4.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/empleo.css">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <style>
+        #comentarios {
+            gap: 10px;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            border-radius: 25px;
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+            word-wrap: break-word; /* Para asegurar que el texto se ajuste y no se desborde */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Para mostrar '...' si el texto es demasiado largo */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Empleos<b>ULEAM</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="../menu.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                        <li><a href="../perfil.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
+                        <li><a href="../notifications.html"><i class="fa-solid fa-bell"></i>Notificaciones</a></li>
+                        <li><a href="https://www.uleam.edu.ec"><i class="fa-solid fa-building-columns"></i> ULEAM</a>
+                        </li>
+                        <li><a href="../empleos.html"><i class="fa-solid fa-briefcase"></i>Empleos</a></li>
+                        <li><a href="../login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+
+    <!--Portada-->
+    <div class="container-all" id="move-content">
+
+        <div class="work2-container-cover">
+            <div class="ctn2-info-cover">
+                <h1>PESCIMERA</h1>
+                <h1>S.A.</h1>
+            </div>
+        </div>
+
+        <!--Empleos-->
+
+        <div class="container-content">
+            <article>
+
+                <h1>¡Únete a PESCIMERA S.A. como Inspector Agropecuario y Contribuye al Sector Agroindustrial!</h1>
+
+                <p>PESCIMERA S.A., líder en el sector agroindustrial, está en búsqueda de un Inspector Agropecuario comprometido y con conocimientos sólidos en la inspección de procesos agropecuarios. Esta posición jugará un papel fundamental en nuestro compromiso con la calidad y la sostenibilidad, asegurando el cumplimiento de las normativas vigentes y contribuyendo al desarrollo responsable de nuestros productos y procesos.</p>
+
+                <img src="../images/empleos/empleo-agro.jpg" alt="">
+
+                <h2>Descripción del puesto:</h2>
+                <p>Como Inspector Agropecuario en PESCIMERA S.A., serás responsable de realizar inspecciones detalladas en todas las etapas de producción agropecuaria, desde la siembra hasta la cosecha y el procesamiento. Deberás asegurar el cumplimiento de estándares de calidad y sanidad, identificar posibles riesgos y proponer mejoras continuas en nuestros métodos y prácticas agrícolas y ganaderas.</p>
+
+                <h2>Requisitos y beneficios:</h2>
+                <p>Buscamos a un profesional con formación en agronomía, veterinaria o campos relacionados, con experiencia demostrable en inspección agropecuaria. Valoramos habilidades en la interpretación y aplicación de normativas sanitarias y ambientales. Ofrecemos un entorno de trabajo dinámico y colaborativo, oportunidades de desarrollo profesional y un paquete de beneficios competitivo que incluye seguro médico, plan de pensiones y posibilidades de crecimiento dentro de nuestra organización.</p>
+
+                <p>Únete a PESCIMERA S.A. y contribuye al crecimiento sostenible del sector agroindustrial, asegurando la calidad y seguridad de nuestros productos para satisfacer las demandas de nuestros clientes y el bienestar de la comunidad.</p>
+
+            </article>
+
+            <div class="container-aside">
+                <aside>
+                    <img class="p1" src="../images/empleos/pescimera.jpg" alt="">
+                </aside>
+
+                <aside>
+                    <h1>Estadística de empleabilidad</h1>
+                    <img src="/images/empleos/e5.jpg" alt="">
+                </aside>
+
+                <aside>
+                    <form id="comentario-form">
+                        <h2>Valora la publicación de este empleo</h2>
+                        <label for="comentario">Comentario:</label>
+                        <input type="text" id="comentario" name="comentario">
+                        <label for="estrellas">Cantidad de Estrellas (0-5):</label>
+                        <input type="number" id="estrellas" name="estrellas" min="0" max="5">
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <div id="comentarios"></div>
+                </aside>
+            </div>
+
+        </div>
+
+        <!--Footer-->
+
+        <div class="container-footer">
+            <footer>
+                <div class="logo-footer">
+                    <img src="../images/uleam1.png" alt="">
+                </div>
+
+                <div class="redes-footer">
+                    <a href="#"><i class="fa-brands fa-square-facebook icon-redes-footer"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter icon-redes-footer"></i></a>
+                </div>
+
+                <hr>
+                <h4>© 2024 EmpleosULEAM - Todos los Derechos Reservados</h4>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="../js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const jobId = 'pescimera2'; // Identificador único para esta oferta de empleo
+            loadComments(jobId);
+
+            document.getElementById('comentario-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
+
+                var comentario = document.getElementById('comentario').value;
+                var estrellas = document.getElementById('estrellas').value;
+
+                if (comentario.trim() && estrellas >= 0 && estrellas <= 5) {
+                    var newComment = {
+                        comentario: comentario,
+                        estrellas: estrellas
+                    };
+
+                    // Obtener comentarios existentes del localStorage
+                    var comentarios = JSON.parse(localStorage.getItem('comentarios_' + jobId)) || [];
+
+                    // Agregar el nuevo comentario al array
+                    comentarios.push(newComment);
+
+                    // Guardar el array actualizado en el localStorage
+                    localStorage.setItem('comentarios_' + jobId, JSON.stringify(comentarios));
+
+                    // Limpiar los campos del formulario
+                    document.getElementById('comentario').value = '';
+                    document.getElementById('estrellas').value = '';
+
+                    // Actualizar la lista de comentarios
+                    loadComments(jobId);
+                } else {
+                    alert('Por favor, ingresa un comentario válido y una cantidad de estrellas entre 0 y 5.');
+                }
+            });
+        });
+
+        function loadComments(jobId) {
+            var comentarios = JSON.parse(localStorage.getItem('comentarios_' + jobId)) || [];
+            var comentariosDiv = document.getElementById('comentarios');
+            comentariosDiv.innerHTML = '';
+
+            comentarios.forEach(function (comment, index) {
+                var comentarioHTML = `
+                    <div class="comment">
+                        <p><strong>◉</strong> ${comment.comentario}</p>
+                        <p><strong>☆</strong> ${comment.estrellas}</p>
+                    </div>
+                `;
+                comentariosDiv.innerHTML += comentarioHTML;
+            });
+        }
+    </script>
+
+</body>
+
+</html>

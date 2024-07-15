@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bolsa de Empleos para ULEAM</title>
+
+    <script src="https://kit.fontawesome.com/b8efc39eb4.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/empleos.css">
+
+    <meta name="viewport"
+        content="width-device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+
+</head>
+
+<body>
+
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Empleos<b>ULEAM</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="menu.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                        <li><a href="perfil.html"><i class="fa-solid fa-user"></i> Perfil</a></li>
+                        <li><a href="notifications.html"><i class="fa-solid fa-bell"></i> Notificaciones</a></li>
+                        <li><a href="https://www.uleam.edu.ec"><i class="fa-solid fa-building-columns"></i> ULEAM</a></li>
+                        <li class="menu-selected"><a href="empleos.html" class="text-menu-selected"><i
+                                    class="fa-solid fa-briefcase"></i> Empleos</a></li>
+                        <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div id="ctn-icon-search">
+                <i class="fa-solid fa-magnifying-glass" id="icon-search"></i>
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+
+    <div id="ctn-bars-search">
+        <input type="text" id="inputSearch" placeholder="¿Qué empleo buscas?">
+    </div>
+
+    <ul id="box-search">
+        <li><a href="empleos_html/empleo1.html"><i class="fa-solid fa-magnifying-glass"></i>Ingeniero de Seguridad Informática - Banco Pichincha</a></li>
+        <li><a href="empleos_html/empleo2.html"><i class="fa-solid fa-magnifying-glass"></i>Gerente de Operaciones - PESCIMERA S.A.</a></li>
+        <li><a href="empleos_html/empleo3.html"><i class="fa-solid fa-magnifying-glass"></i>Médico de Salud Pública - IESS</a></li>
+        <li><a href="empleos_html/empleo4.html"><i class="fa-solid fa-magnifying-glass"></i>Software de Bolda de Empleo para la ULEAM - ULEAM</a></li>
+        <li><a href="empleos_html/empleo5.html"><i class="fa-solid fa-magnifying-glass"></i>Inspector Agropecuario - PESCIMERA S.A.</a></li>
+        <li><a href="empleos_html/empleo6.html"><i class="fa-solid fa-magnifying-glass"></i>Responsable de Calidad Agropecuaria - PESCIMERA S.A.</a></li>
+        <li><a href="empleos_html/empleo7.html"><i class="fa-solid fa-magnifying-glass"></i>Contrucción Parque de Manta - Municipio de Manta</a></li>
+        <li><a href="empleos_html/empleo8.html"><i class="fa-solid fa-magnifying-glass"></i>Coordinador de Actividades Recreativas - Municipio de Manta</a></li>
+    </ul>
+
+    <div id="cover-ctn-search"></div>
+
+    <!--Portada-->
+
+    <div class="container-all" id="move-content">
+
+        <div class="work-container-cover">
+            <div class="container-info-cover">
+                <h1>¡Busque su empleo ideal!</h1>
+                <p>Aquí puedes buscar y postular a cualquier trabajo en el que desees estar.</p>
+            </div>
+        </div>
+
+        <div class="container-post">
+
+            <input type="radio" id="TODOS" name="categories" value="TODOS" checked>
+            <input type="radio" id="TI" name="categories" value="TI">
+            <input type="radio" id="AD-EMPRESAS" name="categories" value="AD-EMPRESAS">
+            <input type="radio" id="MEDICINA" name="categories" value="MEDICINA">
+            <input type="radio" id="SOFTWARE" name="categories" value="SOFTWARE">
+            <input type="radio" id="AGROPECUARIA" name="categories" value="AGROPECUARIA">
+            <input type="radio" id="ARQUITECTURA" name="categories" value="ARQUITECTURA">
+            <input type="radio" id="TURISMO" name="categories" value="TURISMO">
+
+            <div class="container-category">
+                <label for="TODOS">TODOS</label>
+                <label for="TI">TI</label>
+                <label for="AD-EMPRESAS">AD. EMPRESAS</label>
+                <label for="MEDICINA">MEDICINA</label>
+                <label for="SOFTWARE">SOFTWARE</label>
+                <label for="AGROPECUARIA">AGROPECUARIA</label>
+                <label for="ARQUITECTURA">ARQUITECTURA</label>
+                <label for="TURISMO">TURISMO</label>
+            </div>
+
+
+            <div class="posts">
+
+                <div class="post" data-category="TI">
+
+                    <div class="ctn-img">
+                        <img src="images/empleos/bancopichincha.jpg" alt="">
+                    </div>
+                    <h2>Ingeniero de Seguridad Informática - Banco Pichincha</h2>
+                    <span>20 enero 2022 - 1:03pm</span>
+                    <ul class="ctn-tag">
+                        <li>TI</li>
+                    </ul>
+                    <a href="empleos_html/empleo1.html"><button>Leer más</button></a>
+                </div>
+
+                <div class="post" data-category="AD-EMPRESAS TI">
+
+                    <div class="ctn-img">
+                        <img src="images/empleos/empleo-agro.jpg" alt="">
+                    </div>
+                    <h2>Gerente de Operaciones - PESCIMERA S.A.</h2>
+                    <span>21 marzo 2023 - 3:03pm</span>
+                    <ul class="ctn-tag">
+                        <li>TI</li>
+                        <li>AD. EMPRESAS</li>
+                    </ul>
+                    <a href="/empleos_html/empleo2.html"><button>Leer más</button></a>
+                </div>
+
+                <div class="post" data-category="MEDICINA">
+
+                    <div class="ctn-img">
+                        <img src="images/empleos/iess.jpg" alt="">
+                    </div>
+                    <h2>Médico de Salud Pública - IESS</h2>
+                    <span>20 enero 2024 - 6:03pm</span>
+                    <ul class="ctn-tag">
+                        <li>MEDICINA</li>
+                    </ul>
+                    <a href="empleos_html/empleo3.html"><button>Leer más</button></a>
+                </div>
+
+                <div class="post" data-category="SOFTWARE TI">
+
+                    <div class="ctn-img">
+                        <img src="images/empleos/empleo-web.jpg" alt="">
+                    </div>
+                    <h2>Software de Bolsa de Empleo para la ULEAM - ULEAM</h2>
+                    <span>20 enero 2022 - 1:03pm</span>
+                    <ul class="ctn-tag">
+                        <li>TI</li>
+                        <li>SOFTWARE</li>
+                    </ul>
+                    <a href="empleos_html/empleo4.html"><button>Leer más</button></a>
+                </div>
+
+                <div class="post" data-category="MEDICINA AGROPECUARIA">
+
+                    <div class="ctn-img">
+                        <img src="images/empleos/empleo-agro.jpg" alt="">
+                    </div>
+                    <h2>Inspector Agropecuario - PESCIMERA S.A.</h2>
+                    <span>20 enero 2022 - 1:03pm</span>
+                    <ul class="ctn-tag">
+                        <li>MEDICINA</li>
+                        <li>AGROPECUARIA</li>
+                    </ul>
+                    <a href="empleos_html/empleo5.html"><button>Leer más</button></a>
+                </div>
+
+                <div class="post" data-category="MEDICINA AGROPECUARIA">
+
+                    <div class="ctn-img">
+                        <img src="images/empleos/agro.jpg" alt="">
+                    </div>
+                    <h2>Responsable de Calidad Agropecuaria - PESCIMERA S.A.</h2>
+                    <span>20 enero 2023 - 9:29am</span>
+                    <ul class="ctn-tag">
+                        <li>MEDICINA</li>
+                        <li>AGROPECUARIA</li>
+                    </ul>
+                    <a href="empleos_html/empleo6.html"><button>Leer más</button></a>
+                </div>
+
+                <div class="post" data-category="ARQUITECTURA">
+
+                    <div class="ctn-img">
+                        <img src="images/empleos/parque.jpg" alt="">
+                    </div>
+                    <h2>Contrucción Parque de Manta - Municipio de Manta</h2>
+                    <span>20 enero 2022 - 1:03pm</span>
+                    <ul class="ctn-tag">
+                        <li>ARQUITECTURA</li>
+                    </ul>
+                    <a href="empleos_html/empleo7.html"><button>Leer más</button></a>
+                </div>
+
+                <div class="post" data-category="TURISMO">
+
+                    <div class="ctn-img">
+                        <img src="images/empleos/TURISMO.jpg" alt="">
+                    </div>
+                    <h2>Coordinador de Actividades Recreativas - Municipio de Manta</h2>
+                    <span>1 marzo 2024 - 4:05pm</span>
+                    <ul class="ctn-tag">
+                        <li>TURISMO</li>
+                    </ul>
+                    <a href="empleos_html/empleo8.html"><button>Leer más</button></a>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Footer-->
+
+        <div class="container-footer">
+            <footer>
+                <div class="logo-footer">
+                    <img src="images/uleam1.png" alt="">
+                </div>
+
+                <div class="redes-footer">
+                    <a href="#"><i class="fa-brands fa-square-facebook icon-redes-footer"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter icon-redes-footer"></i></a>
+                </div>
+
+                <hr>
+                <h4>© 2024 EmpleosULEAM - Todos los Derechos Reservados</h4>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

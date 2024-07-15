@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bolsa de Empleos para ULEAM</title>
+
+    <script src="https://kit.fontawesome.com/b8efc39eb4.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/form.css">
+
+    <meta name="viewport"
+        content="width-device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+
+</head>
+
+<body>
+
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Empleos<b>ULEAM</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="menu.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                        <li><a href="perfil.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
+                        <li><a href="notifications.html"><i class="fa-solid fa-bell"></i>Notificaciones</a></li>
+                        <li><a href="https://www.uleam.edu.ec"><i class="fa-solid fa-building-columns"></i> ULEAM</a>
+                        </li>
+                        <li><a href="empleos.html"><i class="fa-solid fa-briefcase"></i>Empleos</a></li>
+                        <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+
+    <!--Formulario-->
+
+    <div class="form-all">
+        <div class="form">
+
+            <h1>Bienvenidos a la Sección del formulario de Solicitudes de tu Empresa</h1>
+            <img src="/images/uleam1.png" alt="">
+
+            <div>
+                <h2>Información y necesidad</h2>
+                <h3>Nombre de empresa:</h3>
+                <input type="text" id="companyName" placeholder="Nombre de empresa">
+
+                <h3>¿A qué se dedica su empresa?: </h3>
+                <input type="text" name="" id="companyDescription" placeholder="Descripción">
+
+                <h3>¿Qué clase de personal requiere?:</h3>
+                <input type="text" name="" id="personalRequired" placeholder="Agregue uno a varios">
+            </div>
+
+            <div>
+                <h2>Ubicación</h2>
+                <h3>¿En qué ciudad se encuentra su empresa?</h3>
+                <input type="text" id="companyPro" placeholder="Provincia">
+                <input type="text" id="companyCity" placeholder="Cantón">
+
+                <h3>¿Donde se encuentra ubicada su empresa?</h3>
+                <input type="text" name="" id="adress1" placeholder="Calle 1">
+                <input type="text" id="adress2" placeholder="Calle 2">
+                <input type="text" id="adress3" placeholder="Calle 3 (Opcional)">
+            </div>
+
+            <div>
+                <h2>Método de contacto</h2>
+                <h3>Nombre de referencia:</h3>
+                <input type="text" id="companyReference" placeholder="Nombre de referencia">
+                <h3>Correo electrónico:</h3>
+                <input type="email" id="companyEmail" placeholder="Correo electrónico">
+                <h3>Número de contacto:</h3>
+                <input type="text" name="" id="companyContacNumber" placeholder="Ej: 0938542959">
+            </div>
+
+            <a href="#" id="boton-enviar"><button>Enviar</button></a>
+
+            <!--Script directo de la funcionalidad del botón Enviar-->
+
+            <script>
+                document.getElementById('boton-enviar').addEventListener('click', function (event) {
+                    event.preventDefault(); // Evita que se recargue la página al hacer clic en el botón
+
+                    document.getElementById('mensaje-enviado').style.display = 'block'; // Muestra el mensaje de confirmación
+
+                    setTimeout(function () {
+                        window.location.href = 'menu.html'; // Redirige a menu.html después de 3 segundos
+                    }, 3000); // 3 segundos
+                });
+            </script>
+
+        </div>
+
+        <div id="mensaje-enviado" style="display: none;">
+            <p>Formulario enviado! Atento a su correo en los siguientes 3-7 días</p>
+        </div>
+
+    </div>
+
+
+
+    <!--Footer-->
+
+    <div class="container-footer">
+        <footer>
+            <div class="logo-footer">
+                <img src="images/uleam1.png" alt="">
+            </div>
+
+            <div class="redes-footer">
+                <a href="#"><i class="fa-brands fa-square-facebook icon-redes-footer"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter icon-redes-footer"></i></a>
+            </div>
+
+            <hr>
+            <h4>© 2024 EmpleosULEAM - Todos los Derechos Reservados</h4>
+        </footer>
+    </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

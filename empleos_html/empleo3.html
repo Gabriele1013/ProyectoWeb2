@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bolsa de Empleos para ULEAM</title>
+
+    <script src="https://kit.fontawesome.com/b8efc39eb4.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/empleo.css">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <style>
+        #comentarios {
+            gap: 10px;
+        }
+
+        .comment {
+            background-color: #f9f9f9;
+            border-radius: 25px;
+            padding: 10px;
+            margin: 5px;
+            width: 200px;
+            word-wrap: break-word; /* Para asegurar que el texto se ajuste y no se desborde */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Para mostrar '...' si el texto es demasiado largo */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Header - menu-->
+    <header>
+
+        <div class="header-content">
+
+            <div class="logo">
+                <h1>Empleos<b>ULEAM</b></h1>
+            </div>
+
+            <div class="menu" id="show-menu">
+
+                <nav>
+                    <ul>
+                        <li><a href="../menu.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                        <li><a href="../perfil.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
+                        <li><a href="../notifications.html"><i class="fa-solid fa-bell"></i>Notificaciones</a></li>
+                        <li><a href="https://www.uleam.edu.ec"><i class="fa-solid fa-building-columns"></i> ULEAM</a>
+                        </li>
+                        <li><a href="../empleos.html"><i class="fa-solid fa-briefcase"></i>Empleos</a></li>
+                        <li><a href="../login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div id="icon-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+    </header>
+
+    <!--Portada-->
+    <div class="container-all" id="move-content">
+
+        <div class="work3-container-cover">
+            <div class="ctn3-info-cover">
+                <h1>I.E.S.S</h1>
+            </div>
+        </div>
+
+        <!--Empleos-->
+
+        <div class="container-content">
+            <article>
+
+                <h1>Médico de salud pública</h1>
+
+                <p>El Instituto Ecuatoriano de Seguridad Social (IESS) está buscando un profesional comprometido y apasionado por la salud pública para unirse a nuestro equipo como Médico de Salud Pública. Esta posición es fundamental para contribuir al bienestar de nuestra comunidad, garantizando la calidad y accesibilidad de los servicios de salud que ofrecemos a nuestros afiliados y beneficiarios.</p>
+
+                <img src="../images/empleos/iesspor.jpg" alt="">
+
+                <h2>Descripción del puesto:
+                </h2>
+
+                <p>Como Médico de Salud Pública en el IESS, tendrás la oportunidad de aplicar tus conocimientos médicos en la gestión y ejecución de programas de prevención, promoción y tratamiento de enfermedades. Serás responsable de evaluar y mejorar constantemente las políticas de salud pública, trabajando en estrecha colaboración con otros profesionales de la salud y organismos gubernamentales para asegurar que nuestras iniciativas beneficien a la mayor cantidad posible de personas.</p>
+
+                <h2>Requisitos y beneficios:</h2>
+                <p>Buscamos a un médico con experiencia en salud pública, capaz de liderar iniciativas innovadoras y adaptarse a entornos dinámicos. Ofrecemos un ambiente de trabajo colaborativo, oportunidades de desarrollo profesional continuo y un paquete de beneficios competitivo que incluye seguro médico, horarios flexibles y la posibilidad de contribuir significativamente al bienestar de la comunidad ecuatoriana.</p>
+                <p>¡Únete al IESS y ayuda a construir un futuro más saludable y seguro para todos!</p>
+            </article>
+
+            <div class="container-aside">
+                <aside>
+                    <img class="p1" src="../images/empleos/iesslogo.png" alt="">
+                </aside>
+
+                <aside>
+                    <h1>Estadística de empleabilidad</h1>
+                    <img src="/images/empleos/e3.jpg" alt="">
+                </aside>
+
+                <aside>
+                    <form id="comentario-form">
+                        <h2>Valora la publicación de este empleo</h2>
+                        <label for="comentario">Comentario:</label>
+                        <input type="text" id="comentario" name="comentario">
+                        <label for="estrellas">Cantidad de Estrellas (0-5):</label>
+                        <input type="number" id="estrellas" name="estrellas" min="0" max="5">
+                        <button type="submit">Enviar</button>
+                    </form>
+                    <div id="comentarios"></div>
+                </aside>
+            </div>
+
+        </div>
+
+        <!--Footer-->
+
+        <div class="container-footer">
+            <footer>
+                <div class="logo-footer">
+                    <img src="../images/uleam1.png" alt="">
+                </div>
+
+                <div class="redes-footer">
+                    <a href="#"><i class="fa-brands fa-square-facebook icon-redes-footer"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter icon-redes-footer"></i></a>
+                </div>
+
+                <hr>
+                <h4>© 2024 EmpleosULEAM - Todos los Derechos Reservados</h4>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="../js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const jobId = 'IESS'; // Identificador único para esta oferta de empleo
+            loadComments(jobId);
+
+            document.getElementById('comentario-form').addEventListener('submit', function (event) {
+                event.preventDefault(); // Evitar que se recargue la página al enviar el formulario
+
+                var comentario = document.getElementById('comentario').value;
+                var estrellas = document.getElementById('estrellas').value;
+
+                if (comentario.trim() && estrellas >= 0 && estrellas <= 5) {
+                    var newComment = {
+                        comentario: comentario,
+                        estrellas: estrellas
+                    };
+
+                    // Obtener comentarios existentes del localStorage
+                    var comentarios = JSON.parse(localStorage.getItem('comentarios_' + jobId)) || [];
+
+                    // Agregar el nuevo comentario al array
+                    comentarios.push(newComment);
+
+                    // Guardar el array actualizado en el localStorage
+                    localStorage.setItem('comentarios_' + jobId, JSON.stringify(comentarios));
+
+                    // Limpiar los campos del formulario
+                    document.getElementById('comentario').value = '';
+                    document.getElementById('estrellas').value = '';
+
+                    // Actualizar la lista de comentarios
+                    loadComments(jobId);
+                } else {
+                    alert('Por favor, ingresa un comentario válido y una cantidad de estrellas entre 0 y 5.');
+                }
+            });
+        });
+
+        function loadComments(jobId) {
+            var comentarios = JSON.parse(localStorage.getItem('comentarios_' + jobId)) || [];
+            var comentariosDiv = document.getElementById('comentarios');
+            comentariosDiv.innerHTML = '';
+
+            comentarios.forEach(function (comment, index) {
+                var comentarioHTML = `
+                    <div class="comment">
+                        <p><strong>◉</strong> ${comment.comentario}</p>
+                        <p><strong>☆</strong> ${comment.estrellas}</p>
+                    </div>
+                `;
+                comentariosDiv.innerHTML += comentarioHTML;
+            });
+        }
+    </script>
+
+</body>
+
+</html>

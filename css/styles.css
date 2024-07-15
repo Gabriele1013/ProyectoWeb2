@@ -1,0 +1,76 @@
+body {
+    background-image: url(https://www.uleam.edu.ec/wp-content/uploads/2022/11/EZM_1396-1024x683.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    margin-top: 600px;
+    margin-bottom: 100px;
+    background-color: #ffffff;
+    padding: 20px 45px;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px -15px black;
+}
+
+input, select, button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+
+
+.container button {
+    background-color: #935f23;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.small {
+    font-size: 0.8em; /* 2.5 veces más pequeño */
+    color: #ff0000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos CSS anteriores pueden ser reutilizados              res_users*/
+
+textarea {
+    height: 100px;
+}
+
+button {
+    margin-top: 10px;
+}

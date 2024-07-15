@@ -1,0 +1,140 @@
+/* Portada */
+
+.profile-ctn-cover .container-info-cover{
+    max-width: 400px;
+    height: 100px;
+    margin-top: 100px;
+    margin-left: 300px;
+    z-index: 1;
+}
+
+.container-info-cover h1{
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 20px;
+    background: #935f23;
+    border-radius: 50px;
+    padding: 5px 25px;
+    cursor: default;
+}
+
+.container-info-cover p{
+    color: #935f23;
+    font-size: 20px;
+    font-weight: 300;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: default;
+    margin-left: 50px;
+}
+
+#icon-menu{
+    right: 20px;
+}
+
+/* Contenedor de datos del perfil */
+
+.ctn-profile-data{
+    background: #ffffff;
+    padding: 50px;
+    margin: 30px 250px;
+    border-radius: 50px;
+    box-shadow: 0 4px 25px -22px #000;
+}
+
+/* Imagen de perfil */
+
+.ctn-profile-img{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.ctn-profile-img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    border: 5px solid #000;
+}
+
+.img-changes{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-upload button{
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: -30px;
+    margin-left: 10px;
+    padding: 9px 15px;
+    background: #935f23;
+    border: none;
+    color: #ffffff;
+    transition: all 300ms;
+}
+
+.img-upload button:hover,
+.img-deleted button:hover{
+    transform: scale(1.1);
+    background: #744919;
+    border: 2px solid #161616;
+}
+
+.img-deleted button{
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: -30px;
+    margin-right: 10px;
+    padding: 9px 15px;
+    background: #935f23;
+    color: #ffffff;
+    border: none;
+    transition: all 300ms;
+}
+
+/* Información de usuario */
+
+.ctn-profile-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    font-style: normal;
+}
+
+.ctn-profile-info input,
+.ctn-profile-info select{
+    font-style: italic;
+    margin-left: 20px;
+    color: #161616;
+    font-size: 15px;
+    padding: 2px 10px;
+    border: 1px;
+    border-radius: 6px;
+    width: 350px;
+}
+
+.ctn-profile-info #guardarDatos{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    background: #935f23;
+    color: #ffffff;
+    transition: all 300ms;
+    margin-left: 500px;
+}
+
+.ctn-profile-info #guardarDatos:hover{
+    transform: scale(1.1);
+    background: #744919;
+    border: 3px solid #161616;
+}
