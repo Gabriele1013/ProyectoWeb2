@@ -49,9 +49,7 @@
 }
 
 .folleto {
-    width: 1200px;
-    display: flex;
-    align-items: center;
+    width: 95%;
     border-radius: 12px;
     border: 1px solid #ccc;
     margin-top: 20px;
@@ -59,9 +57,12 @@
 }
 
 .folleto img{
+    display: flex;
+    align-items: baseline;
+    justify-content: ;
     width: 200px;
     height: 150px;
-    object-fit: cover;
+    border-radius: 5px;
 }
 
 .contenido-folleto {

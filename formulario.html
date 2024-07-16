@@ -1,144 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <title>Bolsa de Empleos para ULEAM</title>
-
     <script src="https://kit.fontawesome.com/b8efc39eb4.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/form.css">
+    <meta name="viewport" content="width-device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+    <style>
+        .form-style {
+            width: 400px;
+            background: #e2e4e3;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 25px;
+            border: 1px solid black;
+        }
 
-    <meta name="viewport"
-        content="width-device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
+        #toggle-entries {
+            opacity: 5%;
+            padding: 5px;
+            margin: 20px 0 0 0;
+            border-radius: 5px;
+            background: #935f23;
+            color: white;
+        }
 
+        #toggle-entries:hover {
+            opacity: 25%;
+        }
+    </style>
 </head>
 
 <body>
-
-
     <!--Header - menu-->
     <header>
-
         <div class="header-content">
-
             <div class="logo">
                 <h1>Empleos<b>ULEAM</b></h1>
             </div>
-
             <div class="menu" id="show-menu">
-
                 <nav>
                     <ul>
                         <li><a href="menu.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
                         <li><a href="perfil.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
                         <li><a href="notifications.html"><i class="fa-solid fa-bell"></i>Notificaciones</a></li>
-                        <li><a href="https://www.uleam.edu.ec"><i class="fa-solid fa-building-columns"></i> ULEAM</a>
-                        </li>
+                        <li><a href="https://www.uleam.edu.ec"><i class="fa-solid fa-building-columns"></i> ULEAM</a></li>
                         <li><a href="empleos.html"><i class="fa-solid fa-briefcase"></i>Empleos</a></li>
                         <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
                     </ul>
                 </nav>
-
             </div>
-
         </div>
-
         <div id="icon-menu">
             <i class="fa-solid fa-bars"></i>
         </div>
-
     </header>
 
     <!--Formulario-->
-
     <div class="form-all">
         <div class="form">
-
             <h1>Bienvenidos a la Sección del formulario de Solicitudes de tu Empresa</h1>
             <img src="/images/uleam1.png" alt="">
-
             <div>
                 <h2>Información y necesidad</h2>
                 <h3>Nombre de empresa:</h3>
-                <input type="text" id="companyName" placeholder="Nombre de empresa">
-
+                <input type="text" id="companyName" placeholder="Nombre de empresa" required>
                 <h3>¿A qué se dedica su empresa?: </h3>
-                <input type="text" name="" id="companyDescription" placeholder="Descripción">
-
+                <input type="text" name="" id="companyDescription" placeholder="Descripción" required>
                 <h3>¿Qué clase de personal requiere?:</h3>
-                <input type="text" name="" id="personalRequired" placeholder="Agregue uno a varios">
+                <input type="text" name="" id="personalRequired" placeholder="Agregue uno a varios" required>
             </div>
-
             <div>
                 <h2>Ubicación</h2>
                 <h3>¿En qué ciudad se encuentra su empresa?</h3>
-                <input type="text" id="companyPro" placeholder="Provincia">
-                <input type="text" id="companyCity" placeholder="Cantón">
-
-                <h3>¿Donde se encuentra ubicada su empresa?</h3>
-                <input type="text" name="" id="adress1" placeholder="Calle 1">
-                <input type="text" id="adress2" placeholder="Calle 2">
+                <input type="text" id="companyPro" placeholder="Provincia" required>
+                <input type="text" id="companyCity" placeholder="Cantón" required>
+                <h3>¿Dónde se encuentra ubicada su empresa?</h3>
+                <input type="text" name="" id="adress1" placeholder="Calle 1" required>
+                <input type="text" id="adress2" placeholder="Calle 2" required>
                 <input type="text" id="adress3" placeholder="Calle 3 (Opcional)">
             </div>
-
             <div>
                 <h2>Método de contacto</h2>
                 <h3>Nombre de referencia:</h3>
-                <input type="text" id="companyReference" placeholder="Nombre de referencia">
+                <input type="text" id="companyReference" placeholder="Nombre de referencia" required>
                 <h3>Correo electrónico:</h3>
-                <input type="email" id="companyEmail" placeholder="Correo electrónico">
+                <input type="email" id="companyEmail" placeholder="Correo electrónico" required>
                 <h3>Número de contacto:</h3>
-                <input type="text" name="" id="companyContacNumber" placeholder="Ej: 0938542959">
+                <input type="text" name="" id="companyContacNumber" placeholder="Ej: 0938542959" required>
             </div>
-
             <a href="#" id="boton-enviar"><button>Enviar</button></a>
-
-            <!--Script directo de la funcionalidad del botón Enviar-->
-
-            <script>
-                document.getElementById('boton-enviar').addEventListener('click', function (event) {
-                    event.preventDefault(); // Evita que se recargue la página al hacer clic en el botón
-
-                    document.getElementById('mensaje-enviado').style.display = 'block'; // Muestra el mensaje de confirmación
-
-                    setTimeout(function () {
-                        window.location.href = 'menu.html'; // Redirige a menu.html después de 3 segundos
-                    }, 3000); // 3 segundos
-                });
-            </script>
-
         </div>
-
         <div id="mensaje-enviado" style="display: none;">
             <p>Formulario enviado! Atento a su correo en los siguientes 3-7 días</p>
         </div>
-
+        <button id="toggle-entries">Mostrar formularios</button>
+        <div id="entries" style="display: none;"></div>
     </div>
 
-
-
     <!--Footer-->
-
     <div class="container-footer">
         <footer>
             <div class="logo-footer">
                 <img src="images/uleam1.png" alt="">
             </div>
-
             <div class="redes-footer">
                 <a href="#"><i class="fa-brands fa-square-facebook icon-redes-footer"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
                 <a href="#"><i class="fa-brands fa-x-twitter icon-redes-footer"></i></a>
             </div>
-
             <hr>
             <h4>© 2024 EmpleosULEAM - Todos los Derechos Reservados</h4>
         </footer>
     </div>
 
-    </div>
+    <script>
+        // Ejecuta la función cuando el documento se ha cargado completamente
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtiene el botón de enviar y los elementos para mostrar/ocultar las entradas
+            const botonEnviar = document.getElementById('boton-enviar');
+            const entriesDiv = document.getElementById('entries');
+            const toggleEntriesButton = document.getElementById('toggle-entries');
+    
+            // Añade un evento de clic al botón de enviar
+            botonEnviar.addEventListener('click', function (event) {
+                // Previene el comportamiento predeterminado del clic en un enlace (navegación)
+                event.preventDefault();
+    
+                // Obtiene los valores de los campos del formulario
+                const companyName = document.getElementById('companyName').value;
+                const companyDescription = document.getElementById('companyDescription').value;
+                const personalRequired = document.getElementById('personalRequired').value;
+                const companyPro = document.getElementById('companyPro').value;
+                const companyCity = document.getElementById('companyCity').value;
+                const adress1 = document.getElementById('adress1').value;
+                const adress2 = document.getElementById('adress2').value;
+                const adress3 = document.getElementById('adress3').value;
+                const companyReference = document.getElementById('companyReference').value;
+                const companyEmail = document.getElementById('companyEmail').value;
+                const companyContacNumber = document.getElementById('companyContacNumber').value;
+    
+                // Verifica si algún campo requerido está vacío
+                if (companyName === "" || companyDescription === "" || personalRequired === "" ||
+                    companyPro === "" || companyCity === "" || adress1 === "" ||
+                    adress2 === "" || companyReference === "" || companyEmail === "" || companyContacNumber === "") {
+                    // Muestra una alerta si algún campo requerido está vacío
+                    alert("Por favor, rellene todos los campos requeridos.");
+                    return;
+                }
+    
+                // Crea un objeto con los datos del formulario
+                const entry = {
+                    companyName,
+                    companyDescription,
+                    personalRequired,
+                    companyPro,
+                    companyCity,
+                    adress1,
+                    adress2,
+                    adress3,
+                    companyReference,
+                    companyEmail,
+                    companyContacNumber
+                };
+    
+                // Guarda la entrada en el almacenamiento local
+                saveEntry(entry);
+                // Muestra las entradas almacenadas
+                displayEntries();
+                // Muestra el mensaje de confirmación de envío
+                document.getElementById('mensaje-enviado').style.display = 'block';
+    
+                // Oculta el mensaje de confirmación después de 3 segundos
+                setTimeout(function () {
+                    document.getElementId('mensaje-enviado').style.display = 'none';
+                }, 3000); // 3 segundos
+            });
+    
+            // Añade un evento de clic al botón para mostrar/ocultar las entradas
+            toggleEntriesButton.addEventListener('click', function () {
+                if (entriesDiv.style.display === 'none') {
+                    entriesDiv.style.display = 'block';
+                    toggleEntriesButton.textContent = 'Ocultar formularios';
+                } else {
+                    entriesDiv.style.display = 'none';
+                    toggleEntriesButton.textContent = 'Mostrar formularios';
+                }
+            });
+    
+            // Función para guardar una entrada en el almacenamiento local
+            function saveEntry(entry) {
+                // Obtiene las entradas existentes del almacenamiento local o un array vacío si no hay ninguna
+                let entries = JSON.parse(localStorage.getItem('entries')) || [];
+                // Añade la nueva entrada al array
+                entries.push(entry);
+                // Guarda el array actualizado en el almacenamiento local
+                localStorage.setItem('entries', JSON.stringify(entries));
+            }
+    
+            // Función para mostrar las entradas almacenadas
+            function displayEntries() {
+                // Obtiene las entradas del almacenamiento local o un array vacío si no hay ninguna
+                let entries = JSON.parse(localStorage.getItem('entries')) || [];
+                // Limpia el contenido del div de entradas
+                entriesDiv.innerHTML = '';
+                // Recorre cada entrada y la añade al div de entradas
+                entries.forEach(function (entry, index) {
+                    const entryDiv = document.createElement('div');
+                    entryDiv.className = 'entry';
+                    entryDiv.innerHTML = `
+                    <div class="form-style">
+                        <p><strong>Nombre de empresa:</strong> ${entry.companyName}</p>
+                        <p><strong>Descripción:</strong> ${entry.companyDescription}</p>
+                        <p><strong>Personal requerido:</strong> ${entry.personalRequired}</p>
+                    </div>
+                    `;
+                    entriesDiv.appendChild(entryDiv);
+                });
+            }
+    
+            // Muestra las entradas almacenadas al cargar la página
+            displayEntries();
+        });
+    </script>
 
     <script src="js/script.js"></script>
 </body>
