@@ -143,7 +143,7 @@
          2px  2px 0 #686868;
 }
 
-/*3er empleo*/
+/*4to empleo*/
 
 .work4-container-cover{
     width: 100%;
@@ -181,6 +181,54 @@
 }
 
 .ctn4-info-cover h1{
+    font-size: 80px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #686868,
+        -2px  2px 0 #000,
+         2px  2px 0 #686868;
+}
+
+/*7mo empleo*/
+
+.work7-container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../images/empleos/parque.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.work7-container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fffcf8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 20%;
+}
+
+.ctn7-info-cover{
+    max-width: 800px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.ctn7-info-cover h1{
     font-size: 80px;
     font-weight: 500;
     color: rgb(255, 255, 255);
