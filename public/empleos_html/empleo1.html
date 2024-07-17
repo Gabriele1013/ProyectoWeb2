@@ -13,10 +13,25 @@
     <meta name="viewport"
         content="width-device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0">
 
+    <style>
+        #comentarios {
+            gap: 10px;
+        }
+
+        .comment {
+            background-color: #f3f1f1;
+            padding: 10px;
+            margin: 5px;
+            width: 95%;
+            border-radius: 25px;
+            word-wrap: break-word; /* Para asegurar que el texto se ajuste y no se desborde */
+            overflow: hidden;
+            text-overflow: ellipsis; /* Para mostrar '...' si el texto es demasiado largo */
+        }
+    </style>
 </head>
 
 <body>
-
 
     <!--Header - menu-->
     <header>
@@ -48,23 +63,6 @@
         <div id="icon-menu">
             <i class="fa-solid fa-bars"></i>
         </div>
-
-        <style>
-            #comentarios {
-                gap: 10px;
-            }
-    
-            .comment {
-                background-color: #f3f1f1;
-                padding: 10px;
-                margin: 5px;
-                width: 250px;
-                border-radius: 25px;
-                word-wrap: break-word; /* Para asegurar que el texto se ajuste y no se desborde */
-                overflow: hidden;
-                text-overflow: ellipsis; /* Para mostrar '...' si el texto es demasiado largo */
-            }
-        </style>
     </header>
 
     <!--Portada-->
@@ -176,7 +174,10 @@
                 var estrellas = document.getElementById('estrellas').value;
 
                 if (comentario.trim() && estrellas >= 0 && estrellas <= 5) {
+                    var currentUser = JSON.parse(localStorage.getItem('currentUser'));
                     var newComment = {
+                        usuario: currentUser.fullName,
+                        carrera: currentUser.career,
                         comentario: comentario,
                         estrellas: estrellas
                     };
@@ -210,6 +211,7 @@
             comentarios.forEach(function (comment, index) {
                 var comentarioHTML = `
                     <div class="comment">
+                        <p><strong>${comment.usuario} • ${comment.carrera}</strong></p>
                         <p><strong>◉</strong> ${comment.comentario}</p>
                         <p><strong>☆</strong> ${comment.estrellas}</p>
                     </div>

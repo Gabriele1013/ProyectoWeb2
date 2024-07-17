@@ -18,6 +18,16 @@ function subirImagenPerfil(file) {
                 currentUser.photo = base64Image;
                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
 
+                // Actualizar también en users si existe el usuario
+                let users = JSON.parse(localStorage.getItem('users'));
+                if (users) {
+                    let index = users.findIndex(user => user.email === currentUser.email);
+                    if (index !== -1) {
+                        users[index].photo = base64Image;
+                        localStorage.setItem('users', JSON.stringify(users));
+                    }
+                }
+
                 // Mostrar la imagen en la interfaz
                 document.getElementById('imagenPerfil').src = 'data:image/png;base64,' + base64Image;
             };
@@ -25,6 +35,29 @@ function subirImagenPerfil(file) {
         };
         reader.readAsDataURL(file);
     }
+}
+
+// Función para eliminar la imagen de perfil
+function eliminarImagenPerfil() {
+    // Obtener el usuario actual almacenado en localStorage
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+    // Reiniciar la foto a la imagen por defecto
+    currentUser.photo = '';
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+    // Actualizar también en users si existe el usuario
+    let users = JSON.parse(localStorage.getItem('users'));
+    if (users) {
+        let index = users.findIndex(user => user.email === currentUser.email);
+        if (index !== -1) {
+            users[index].photo = '';
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+    }
+
+    // Mostrar la imagen por defecto en la interfaz
+    document.getElementById('imagenPerfil').src = '/images/profile.png'; // Cambiar por la ruta de la imagen por defecto
 }
 
 // Función para convertir imagen a Base64
@@ -39,19 +72,6 @@ function getBase64Image(img) {
     const dataURL = canvas.toDataURL('image/png'); // Cambia "png" por el formato que necesites
 
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, '');
-}
-
-// Función para eliminar la imagen de perfil
-function eliminarImagenPerfil() {
-    // Obtener el usuario actual almacenado en localStorage
-    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-
-    // Reiniciar la foto a la imagen por defecto
-    currentUser.photo = '';
-    localStorage.setItem('currentUser', JSON.stringify(currentUser));
-
-    // Mostrar la imagen por defecto en la interfaz
-    document.getElementById('imagenPerfil').src = '/images/profile.png'; // Cambiar por la ruta de la imagen por defecto
 }
 
 // Cargar datos del usuario desde localStorage al cargar la página
@@ -144,6 +164,18 @@ window.addEventListener('load', () => {
 
                 // Guardar el usuario actualizado en localStorage
                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+                // Actualizar también en users si existe el usuario
+                let users = JSON.parse(localStorage.getItem('users'));
+                if (users) {
+                    let index = users.findIndex(user => user.email === currentUser.email);
+                    if (index !== -1) {
+                        users[index].numberID = numberID;
+                        users[index].phoneNumber = phoneNumber;
+                        users[index].age = age;
+                        localStorage.setItem('users', JSON.stringify(users));
+                    }
+                }
 
                 // Mostrar los datos actualizados en la interfaz
                 document.getElementById('dId').value = currentUser.numberID;

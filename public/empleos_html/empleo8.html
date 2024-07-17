@@ -23,7 +23,7 @@
             border-radius: 25px;
             padding: 10px;
             margin: 5px;
-            width: 200px;
+            width: 95%;
             word-wrap: break-word; /* Para asegurar que el texto se ajuste y no se desborde */
             overflow: hidden;
             text-overflow: ellipsis; /* Para mostrar '...' si el texto es demasiado largo */
@@ -147,7 +147,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const jobId = 'municipioManta2'; // Identificador único para esta oferta de empleo
+            const jobId = 'parque'; // Identificador único para esta oferta de empleo
             loadComments(jobId);
 
             document.getElementById('comentario-form').addEventListener('submit', function (event) {
@@ -157,7 +157,10 @@
                 var estrellas = document.getElementById('estrellas').value;
 
                 if (comentario.trim() && estrellas >= 0 && estrellas <= 5) {
+                    var currentUser = JSON.parse(localStorage.getItem('currentUser'));
                     var newComment = {
+                        usuario: currentUser.fullName,
+                        carrera: currentUser.career,
                         comentario: comentario,
                         estrellas: estrellas
                     };
@@ -191,6 +194,7 @@
             comentarios.forEach(function (comment, index) {
                 var comentarioHTML = `
                     <div class="comment">
+                        <p><strong>${comment.usuario} • ${comment.carrera}</strong></p>
                         <p><strong>◉</strong> ${comment.comentario}</p>
                         <p><strong>☆</strong> ${comment.estrellas}</p>
                     </div>
