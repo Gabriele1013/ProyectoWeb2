@@ -158,7 +158,7 @@
             let user = users.find(user => user.email === email && user.password === password);
 
             if (user) {
-                // Redirigir a perfil.html si las credenciales son correctas
+                // Redirigir a menu.html si las credenciales son correctas
                 window.location.href = "menu.html";
                 // Almacenar usuario actual en localStorage
                 localStorage.setItem('currentUser', JSON.stringify(user));
